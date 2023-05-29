@@ -12,59 +12,341 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="preload" as="script" href="./assets/js/main.js">
 </head>
-
 <body>
-    <script defer src="./assets/js/main.js"></script>
-    <header class="header">
-        <nav class="nav">
+    <header class="header" id="header">
+        <label class="nav__menu" for="navMenu">
+            <img class="menu__icon" src="/assets/img/icon-menu.png" alt="Menu" height="40" width="40">
+        </label>
+        <input class="nav__menu--trigger hidden" type="checkbox" id="navMenu">
+        <nav class="nav" id="nav">
             <ul class="nav__list">
                 <li class="list__item" id="homeButton">Home</li>
                 <li class="list__item" id="portfolioButton">Portfolio</li>
-                <li class="list__item" id="contactButton">Contact me</li>
+                <li class="list__item" id="aboutButton">About</li>
+                <li class="list__item" id="contactButton">Contact</li>
             </ul>
         </nav>
+        <div class="theme">
+            <label class="theme__switch">
+                <input id="themeButton" type="checkbox">
+                <span class="switch__slider round"></span>
+            </label>
+        </div>
     </header>
     <main>
-        <section class="app" id="home">
-            <div class="container">
+        <!--Home-->
+        <section class="main__head" id="home">
+            <div class="container home">
                 <div class="figure container container--width4">
+                    <img class="custom__shape custom__shape--logo" src="./assets/img/logo.png" alt="">
                     <img class="custom__shape" src="./assets/img/blob.svg" alt="">
+                    <div class="custom__shape custom__shape--stack">
+                        <div class="custom__shape custom__shape--icon custom__shape--other">
+                            <img src="https://img.icons8.com/nolan/512/more.png" alt="">
+                            <div class="container container--column container__other">
+                                <img class="custom__shape custom__other--icon" src="/assets/img/stack/linux-original.svg" alt="Linux" title="Linux" width="40" height="40">
+                                <img class="custom__shape custom__other--icon" src="/assets/img/stack/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap" width="40" height="40">
+                                <img class="custom__shape custom__other--icon" src="/assets/img/stack/bash-original.svg" alt="Bash" title="bash" width="40" height="40">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pattern container container--column  container--width6">
-
                     <h3 class="title__header">Software Developer</h3>
-                    <div class="about container">
+                    <div class="aboutBox container">
                         <div class="container container--width4">
-                            <img class="about__image" src="./assets/img/profile.png" alt="">
+                            <img class="about__avatar" src="./assets/img/profile.png" height="200px" width="200px" alt="Profile Image">
                         </div>
                         <div class="container container--column container--width6">
                             <h4>Practical Programmer</h4>
-                            <p class="about__text">Hello! I'm a developer with 17 years old, i love creating new things!</p>
+                            <p class="about__text">Hello 👋! I'm a Full-Stack Developer from Colombia 🇨🇴. See more about me scrolling down!</p>
                             <ul class="credits__list">
                                 <li class="list__item">
-                                    <a href="https://github.com/practicaldev101" target="_blank"><img src="./assets/img/github.svg" style="color: white;" alt=""></a>
+                                    <a href="https://github.com/practicaldev101" target="_blank"><img src="/assets/img/social/github.svg" style="color: white;" alt=""></a>
                                 </li>
                                 <li class="list__item">
-                                    <a href="https://www.youtube.com/channel/UCk6a5c-G9dIpBDwrBTATgBw" target="_blank"><img src="./assets/img/youtube.svg" style="color: white;" alt=""></a>
+                                    <a href="https://www.youtube.com/channel/UCk6a5c-G9dIpBDwrBTATgBw" target="_blank"><img src="/assets/img/social/youtube.svg" style="color: white;" alt=""></a>
                                 </li>
                                 <li class="list__item">
-                                    <a href="https://www.tiktok.com/@practicalprogrammer" target="_blank"><img src="./assets/img/tiktok.svg" style="color: white;" alt=""></a>
+                                    <a href="https://www.tiktok.com/@practicalprogrammer" target="_blank"><img src="/assets/img/social/tiktok.svg" style="color: white;" alt=""></a>
                                 </li>
                                 <li class="list__item">
-                                    <a href="https://www.instagram.com/practical_dev/" target="_blank"><img src="./assets/img/instagram.svg" style="color: white;" alt=""></a>
+                                    <a href="https://www.instagram.com/practical_dev/" target="_blank"><img src="/assets/img/social/instagram.svg" style="color: white;" alt=""></a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="https://www.linkedin.com/in/carlosospino/" target="_blank"><img src="/assets/img/social/linkedin.svg" style="color: white;" alt=""></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="split split--10h"></div>
         </section>
-        <div class="split"></div>
-        <section class="portfolio" id="portfolio">
-            <h2 class="portfolio__title"> Some Projects </h2>
-            <div class="portfolio__box">
+        <!--About-->
+        <section class="about container container--column" id="about">
+            <div class="container">
+                <div class="container container--column container--width5 justify--start">
+                    <h2 class="section__subtitle">My name is Carlos</h2>
+                    <img class="about__avatar" src="./assets/img/avatar.png" height="50px" width="50px" alt="Profile Image">
+                    <div class="section__box">
+                        <p class="section__text">
+                            As a Web Developer 👨‍💻, I always search to improve, create awesome solutions, and 
+                            make incredible products in relation with users experience. I love teamwork, also
+                            listening different points of view to build strongers ideas.
+                        </p>
+                        <p class="section__text">
+                            <i>"I use my logical and reasoning ability to create efficient ideas and solutions."</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="softSkills container container--column container--width5 items--center justify--start">
+                    <h2 class="section__subtitle">Soft Skills</h2>
+                    <div class="softSkills__container container wrap">
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Communication
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-speak.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Time management
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-time.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Teamwork
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-teamwork.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Creativity
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-creativity.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Adaptability
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-adaptable.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Leadership
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-leader.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Attention to detail
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-detail.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                        <div class="softSkills__skill">
+                            <div class="softSkills__text">
+                                Work ethic
+                            </div>
+                            <div class="softSkills__icon">
+                                <img src="/assets/img/skills/icon-ethic.png" alt="" height="40px" width="40px">
+                            </div>
+                        </div>
+                    <!--<img class="about__image" src="./assets/img/about.svg" height="400px" width="400px" alt="About Image">-->
+                    </div>
+                </div>
+            </div>
+        <div class="container container--column items--center">
+            <h2 class="section__subtitle">Why me?</h2>
+            <div class="container container--column items--center">
+                <img class="section__image section__image--webpage" src="/assets/img/demo_web.png" alt="Demo Web" width="100" height="100">
+                <p class="section__text">
+                Working with me, you don't need to worry about bad practices and quality
+                in products. I put my eyes in small but important details, and also
+                I'm always communicating to ensure the work is being as client expected.
+                </p>
+            </div>
+            
+        </div>
+        </section>
+        <div class="separator">
+            <!-- Text -->
+            <div class="separator__content">&#9677</div>
+        
+            <!-- Separator line -->
+            <div class="separator__separator"></div>
+        </div>
+        <!--Experience-->
+        <section class="experience container container--column">
+            <h2 class="section__title"> Experience </h2>
+            <div class="experience__container container wrap">
+                <div class="experience__card">
+                    <h2 class="card__title">Blue Panda Dev</h2>
+                    <div class="experience__card card__header container">
+                        <a href="https://blue-panda.dev/">
+                            <img class="card__image" src="/assets/img/experience/panda.webp" alt="Panda Logo" width="50" height="50">
+                        </a>
+                    </div>
+                    <div class="card__body container container--column">
+                        <h2>Frontend Developer</h2>
+                        <p>I contribute constantly, always trying to improve and make high quality product,
+                            fixing designs, creating components, and applying good practices.
+                        </p>
+                    </div>
+                    <div class="card__footer container">
+                        <strong>April, 2023 - Now</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="container container--column container--width4"></div>
+        </section>
+        <!--Certifications-->
+        <section class="certification container container--column">
+            <h2 class="section__title"> Certifications </h2>
+            
+            <div class="container container--column container--width4"></div>
+        </section>
+        <div class="separator">
+            <!-- Text -->
+            <div class="separator__content">&#9677</div>
+        
+            <!-- Separator line -->
+            <div class="separator__separator"></div>
+        </div>
+        <!--Education-->
+        <section class="education container container--column" id="home">
+            <div class="diagonal-section__diagonal"></div>
+            <h2 class="section__title"> Education </h2>
+            <div class="education__container container wrap">
+                <div class="education__card container container--column three-dimensions-card">
+                    <h2 class="card__title">Platzi</h2>
+                    <div class="card__header container">
+                        <img src="/assets/img/education/platzi.png" alt="Platzi Icon">
+                    </div>
+                    <div class="card__body container container--column">
+                        <p>Educación de calidad</p>
+                    </div>
+                    <div class="card__footer container container--column">
+                        <strong>2022 - Now</strong>
+                    </div>
+                </div>
 
+                <div class="education__card container container--column three-dimensions-card">
+                    <h2 class="card__title">Alura Latam</h2>
+                    <div class="card__header container">
+                        <img class="card__image--modify" src="/assets/img/education/alura.svg" alt="Platzi Icon">
+                    </div>
+                    <div class="card__body container container--column">
+                        <p>Educación de calidad</p>
+                    </div>
+                    <div class="card__footer container container--column">
+                        <strong>In process</strong>
+                    </div>
+                </div>
+
+                <div class="education__card container container--column three-dimensions-card">
+                    <h2 class="card__title">Oracle Next Education</h2>
+                    <div class="card__header container">
+                        <img src="/assets/img/education/oracle_one.png" alt="Platzi Icon">
+                    </div>
+                    <div class="card__body container container--column">
+                        <p>Educación de calidad</p>
+                    </div>
+                    <div class="card__footer container container--column">
+                        <strong>In process</strong>
+                    </div>
+                </div>
+
+                <div class="education__card container container--column three-dimensions-card">
+                    <h2 class="card__title">Udemy</h2>
+                    <div class="card__header container">
+                        <img class="card__image--modify" src="/assets/img/education/udemy.svg" alt="Udemy Icon">
+                    </div>
+                    <div class="card__body container container--column">
+                        <p>Educación de calidad</p>
+                    </div>
+                    <div class="card__footer container container--column">
+                        <strong>2020 - Now</strong>
+                    </div>
+                </div>
+                <div class="education__card container container--column three-dimensions-card">
+                    <h2 class="card__title">MisiónTIC 2022</h2>
+                    <div class="card__header container">
+                        <img class="card__image--modify" src="/assets/img/education/misiontic.png" alt="Udemy Icon">
+                    </div>
+                    <div class="card__body container container--column">
+                        <p>Educación de calidad</p>
+                    </div>
+                    <div class="card__footer container container--column">
+                        <strong>2021 - 2022</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="separator">
+            <!-- Text -->
+            <div class="separator__content">&#9677</div>
+        
+            <!-- Separator line -->
+            <div class="separator__separator"></div>
+        </div>
+        <!--Projects-->
+        <section class="portfolio container container--column" id="portfolio">
+            <h2 class="section__title"> Some Projects </h2>
+            <div class="portfolio__box">
+                <div class="portfolio__project">
+                    <div class="project__header">
+                        <img class="project__image" src="/assets/img/thumbails/encryper-thumbail.png" alt="Alura + Oracle Encrypter">
+                        <h4 class="project__title">Alura + Oracle Encrypter</h4>
+                    </div>
+                    <div class="project__body">
+                        <p>Don't allow other people to read your messages!</p>
+                        <br>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
+                    </div>
+                    <div class="project__footer">
+                        <a href="https://gifex-app.netlify.app/" target="_blank" class="project__button">Visit</a>
+                    </div>
+                </div>
+                <div class="portfolio__project">
+                    <div class="project__header">
+                        <img class="project__image" src="/assets/img/thumbails/gifex-thumbail.png" alt="GIFEX APP">
+                        <h4 class="project__title">GIFExpertApp</h4>
+                    </div>
+                    <div class="project__body">
+                        <p>Get your favorite GIFs just by one click!</p>
+                        <br>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/react-original-wordmark.svg" alt="React" width="30" height="30" title="React">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
+                    </div>
+                    <div class="project__footer">
+                        <a href="https://gifex-app.netlify.app/" target="_blank" class="project__button">Visit</a>
+                    </div>
+                </div>
                 <div class="portfolio__project">
                     <div class="project__header">
                         <img class="project__image" src="https://github.com/practicaldev101/new-year-countdown-react/blob/master/docs/demo.png?raw=true" alt="">
@@ -73,13 +355,16 @@
                     <div class="project__body">
                         <p>Application that allows to know how many time is remaining to end year.</p>
                         <br>
-                        <strong>Technologies: React, HTML + CSS</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/react-original-wordmark.svg" alt="React" width="30" height="30" title="React">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
                     </div>
                     <div class="project__footer">
                         <a href="https://practical.is-a.dev/new-year-countdown-react/" target="_blank" class="project__button">Visit</a>
                     </div>
                 </div>
-
                 <div class="portfolio__project">
                     <div class="project__header">
                         <img class="project__image" src="https://github.com/practicaldev101/pomodoro-react-app/raw/master/docs/demo.png" alt="">
@@ -88,7 +373,11 @@
                     <div class="project__body">
                         <p>This web application allows you to apply the pomodoro technique.</p>
                         <br>
-                        <strong>Technologies: React, HTML + CSS</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/react-original-wordmark.svg" alt="React" width="30" height="30" title="React">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
                     </div>
 
                     <div class="project__footer">
@@ -104,7 +393,11 @@
                     <div class="project__body">
                         <p>It's a beautiful webpage which you can dedicate to your mother :).</p>
                         <br>
-                        <strong>Technologies: React, HTML + CSS</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/react-original-wordmark.svg" alt="React" width="30" height="30" title="React">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
                     </div>
 
                     <div class="project__footer">
@@ -120,7 +413,11 @@
                     <div class="project__body">
                         <p>Look at this functional calculator, it's Casio!</p>
                         <br>
-                        <strong>Technologies: React, HTML + CSS</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/react-original-wordmark.svg" alt="React" width="30" height="30" title="React">
+                            <img src="/assets/img/stack/html5-original.svg" alt="HTML" width="30" height="30" title="HTML">
+                            <img src="/assets/img/stack/css3-plain-wordmark.svg" alt="CSS" width="30" height="30" title="CSS">
+                        </div>
                     </div>
 
                     <div class="project__footer">
@@ -136,7 +433,9 @@
                     <div class="project__body">
                         <p>A Powerful program which you can download music from YouTube.</p>
                         <br>
-                        <strong>Technologies: Python</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/python-original.svg" alt="Python" width="30" height="30" title="Python">
+                        </div>
                     </div>
 
                     <div class="project__footer">
@@ -152,7 +451,12 @@
                     <div class="project__body">
                         <p>A functional web application for a restaurant where you can order food as client and manage orders as worker.</p>
                         <br>
-                        <strong>Technologies: NodeJS, Express, MySQL, Handlebars</strong>
+                        <div class="project__stack">
+                            <img src="/assets/img/stack/nodejs-original-wordmark.svg" alt="NodeJS" width="30" height="30" title="NodeJS">
+                            <img src="/assets/img/stack/mysql-original-wordmark.svg" alt="MySQL" width="30" height="30" title="MySQL">
+                            <img src="/assets/img/stack/express-original.svg" alt="Express" width="30" height="30" title="Express">
+                            <img src="/assets/img/stack/handlebars-original-wordmark.svg" alt="Handlebars" width="30" height="30" title="Handlebars">
+                        </div>
                     </div>
 
                     <div class="project__footer">
@@ -162,13 +466,59 @@
             </div>
 
         </section>
-
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="container container--width6">
+                <ul class="footer__list">
+                    <h3 class="footer__title">Site</h3>
+                    <li class="list__item">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container container--column items--center container--width4">
+                <h3 class="footer__title">Support me</h3>
+                <ul class="credits__list">
+                    <li class="list__item">
+                        <a href="https://github.com/practicaldev101" target="_blank"><img src="/assets/img/social/github.svg" style="color: white;" alt=""></a>
+                    </li>
+                    <li class="list__item">
+                        <a href="https://www.youtube.com/channel/UCk6a5c-G9dIpBDwrBTATgBw" target="_blank"><img src="/assets/img/social/youtube.svg" style="color: white;" alt=""></a>
+                    </li>
+                    <li class="list__item">
+                        <a href="https://www.tiktok.com/@practicalprogrammer" target="_blank"><img src="/assets/img/social/tiktok.svg" style="color: white;" alt=""></a>
+                    </li>
+                    <li class="list__item">
+                        <a href="https://www.instagram.com/practical_dev/" target="_blank"><img src="/assets/img/social/instagram.svg" style="color: white;" alt=""></a>
+                    </li>
+                    <li class="list__item">
+                        <a href="https://www.linkedin.com/in/carlosospino/" target="_blank"><img src="/assets/img/social/linkedin.svg" style="color: white;" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__container container container--column items--center">
+            <h4>Practical Programmer</h4>
+            <img class="footer__logo" src="./assets/img/logo.png" alt="Logo" width="60" height="60">
+            <p id="copyright"></p>
+        </div>
 
     </footer>
 
 </body>
+<script src="./assets/js/main.js"></script>
+<script type="text/javascript">
+    const copyrightText = document.getElementById("copyright");
+    const actualYear = new Date().getFullYear();
 
+    copyrightText.innerText = "Copyright © " + actualYear;
+</script>
 </html>
